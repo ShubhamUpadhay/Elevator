@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      .floor-button {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+#elevatorCont{
+    position: relative
+}
+      .elevator {
+        width: 50px;
+        height: 80px;
+        background-color: #3498db;
+        position: absolute;
+        transition: top 1s;
+      }
+
+      .door {
+        width: 25px;
+        height: 80px;
+        background-color: #2ecc71;
+        position: absolute;
+        transition: left 0.5s;
+      }
+    </style>
+    <script defer src="./elevator.js"></script>
+  </head>
+
+  <body>
+    <h1>Elevator Simulation</h1>
+
+    <div>
+      <div id="floor-buttons">
+        <div class="floor-button" onclick="requestElevator(1)">1</div>
+        <div class="floor-button" onclick="requestElevator(2)">2</div>
+        <div class="floor-button" onclick="requestElevator(3)">3</div>
+        <div class="floor-button" onclick="requestElevator(4)">4</div>
+      </div>
+      <p id="curFor"></p>
+      <div id="elevatorCont">
+        <div id="elevator" class="elevator" style="top: 240px">
+          <div id="leftDoor" class="door" style="left: -25px"></div>
+          <div id="rightDoor" class="door" style="left: 50px"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
